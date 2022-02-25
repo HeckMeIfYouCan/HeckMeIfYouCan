@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: '/HeckMeIfYouCan/public'
+    publicPath: '/HeckMeIfYouCan/public/'
 }
