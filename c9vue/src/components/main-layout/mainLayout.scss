@@ -1,0 +1,67 @@
+@import "@/scss/_styles.scss";
+
+$content-width: 80%;
+$content-min-width: 300px;
+$content-max-width: 800px;
+
+$nav-bg: #fafafa;
+
+.main-layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  min-width: 400px;
+  min-height: 100vh;
+  overflow-x: auto;
+}
+
+.header-container {
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  min-width: $content-min-width;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  border-bottom: 1px solid #eeeeee;
+  background-color: $nav-bg;
+
+  .nav-left {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 30px;
+  }
+
+  .nav-right {
+    margin: 0 30px 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-content: center;
+
+    .nav-button {
+      margin: 0 10px 0 10px;
+    }
+  }
+}
+
+.content {
+  width: $content-width;
+  min-width: $content-min-width;
+  max-width: $content-max-width;
+  margin: 40px auto 60px auto;
+}
+
+.footer {
+  height: 40px;
+  font-size: $font-size-small;
+  color: #999999;
+
+  a {
+    padding: 10px;
+  }
+}
+

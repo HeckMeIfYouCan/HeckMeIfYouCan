@@ -1,0 +1,54 @@
+<mat-sidenav-container class="all-wrap">
+
+  <mat-sidenav-content class="page-wrap ...">
+
+    <!-- toolbar -->
+    <mat-toolbar>
+      <mat-toolbar-row>
+
+        <!-- icon -->
+        <span>
+          <a class="homelink" routerLink="" routerLinkActive="true">
+            <!--<mat-icon aria-hidden="false" aria-label="Example home icon">triangle</mat-icon>-->
+            <!-- ▲ https://www.w3schools.com/charsets/ref_utf_symbols.asp -->
+            ☉
+            HCI
+          </a>
+        </span>
+
+        <!-- this fills the remaining space of the current row -->
+        <span class="example-fill-remaining-space"></span>
+
+        <!-- nav tabs -->
+        <!--
+        <nav mat-tab-nav-bar [disableRipple]=true>
+          <a mat-tab-link
+             *ngFor="let link of navLinks"
+             [routerLink]="link.link"
+               routerLinkActive #rla="routerLinkActive"
+             [routerLinkActiveOptions]= "{exact: true}"
+             [active]="rla.isActive">{{link.label}}
+          </a>
+        </nav>
+        -->
+
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <!-- content -->
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+
+    <!-- sticky footer -->
+    <footer>
+      <span class="footer">
+        <a class="footerlink" routerLink="" routerLinkActive="true">Home</a> |
+        <a class="footerlink" routerLink="impressum" routerLinkActive="true">Impressum</a> |
+        <a class="footerlink" routerLink="privacy" routerLinkActive="true">Datenschutz</a>
+      </span>
+    </footer>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

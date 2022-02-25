@@ -1,0 +1,52 @@
+// font sizes
+$font-size-tiny: 12px;
+$font-size-small: 14px;
+$font-size: 16px;
+
+// colors
+$font-color: #333333;
+$font-color-hover: #00a9ff;
+$font-color-p: #666666;
+$font-color-link: #5e9eb2;
+
+$bg-color: #ffffff;
+$prim-color: #CCB3E6;
+$prim-color-fine: #4a3b59;
+$prim-color-flat: #f1eaf7;
+
+
+.link {
+  color: inherit;
+  text-decoration: underline dotted;
+
+  &:hover {
+    color: $font-color-hover;
+  }
+}
+
+.bg {
+  background: url('~@/assets/img/bg.jpg') no-repeat fixed;
+
+  &.desaturated {
+      background: url('~@/assets/img/bg25.jpg') no-repeat fixed;
+  }
+}
+
+h1, h2, h3 {
+  font-weight: lighter;
+}
+
+.no-select {
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+// spacer divs 0 .. 100
+@for $i from 0 through 9 {
+  .spacer-#{$i*10+10} {
+    height: $i*10+10px;
+  }
+}
